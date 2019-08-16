@@ -4,3 +4,9 @@ django's cache framework
 Meta options
 proxy models
 multiple inheritance
+
+
+updated on 16th
+
+to include the template folder thats created inside app
+add - 'DIRS': [os.path.join(BASE_DIR,"templates")] inside project settings
