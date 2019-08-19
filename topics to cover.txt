@@ -10,3 +10,22 @@ updated on 16th
 
 to include the template folder thats created inside app
 add - 'DIRS': [os.path.join(BASE_DIR,"templates")] inside project settings
+
+
+translate - example
+
+def change_files():
+    file_names=os.listdir(r"D:\Photos\modified")
+    print(file_names)
+    os.chdir(r"D:\Photos\modified")
+    for val in file_names:
+
+        tab=val.maketrans('0','0','0')
+        
+        res=val.translate(tab)
+        print(res)
+        os.rename(val,val.translate(tab))
+
+    os.chdir(r'C:\Users\Sai Ashwik\PycharmProjects\pythonbasics')
+
+change_files()

@@ -1,0 +1,16 @@
+{% extends 'basetemplate.html' %}
+
+{% block content %}
+
+the frequently asked questions you are looking for are<br>
+{% for x in items %}
+{{ x.question_text }}<br>
+{{x.added_date}}<br>
+{{x.hours }}
+{% endfor %}
+
+{% for y in hours %}
+ hours are {{ y }}
+{% endfor %}
+
+{% endblock %}

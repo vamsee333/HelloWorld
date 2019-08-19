@@ -1,0 +1,33 @@
+from twilio.rest import Client
+
+
+# Your Account Sid and Auth Token from twilio.com/console
+# DANGER! This is insecure. See http://twil.io/secure
+
+
+def notify(name):
+
+    account_sid = 'AC08244817520604a66a1c172a508f740b'
+    auth_token = '770a42c4c701a4812093fb0f35fdfc74'
+    client = Client(account_sid, auth_token)
+    if name =="nar":
+        message = client.messages \
+            .create(
+            body='good night',
+            from_='+12038069215',
+            to='+917981718850',
+        )
+    elif name =="vamsi":
+        message = client.messages.create(body='hello good night',
+                                         from_='+12038069215',
+                                         to='+918919434063',
+                                         )
+
+
+
+
+    print(message.sid)
+
+
+name=input("enter name to notify")
+notify(name)

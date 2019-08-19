@@ -1,0 +1,9 @@
+import urllib.request
+
+text=open("D:\sampletest.txt")
+data=text.read()
+print(data)
+text.close()
+resp=urllib.request.urlopen("http://www.wdylike.appspot.com//?q="+data)
+result=resp.read()
+print(result)
