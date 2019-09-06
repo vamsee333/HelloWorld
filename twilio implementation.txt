@@ -8,7 +8,7 @@ from twilio.rest import Client
 def notify(name):
 
     account_sid = 'AC08244817520604a66a1c172a508f740b'
-    auth_token = '770a42c4c701a4812093fb0f35fdfc74'
+    auth_token = '770a42c4c701a4812093fb0f35fdfc74******'
     client = Client(account_sid, auth_token)
     if name =="nar":
         message = client.messages \
