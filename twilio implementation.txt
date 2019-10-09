@@ -7,20 +7,20 @@ from twilio.rest import Client
 
 def notify(name):
 
-    account_sid = 'AC08244817520604a66a1c172a508f740b'
-    auth_token = '770a42c4c701a4812093fb0f35fdfc74******'
+    account_sid = 'AC08f740b'
+    auth_token = '7704******'
     client = Client(account_sid, auth_token)
     if name =="nar":
         message = client.messages \
             .create(
             body='good night',
-            from_='+12038069215',
-            to='+917981718850',
+            from_='+1215',
+            to='+91750',
         )
     elif name =="vamsi":
         message = client.messages.create(body='hello good night',
-                                         from_='+12038069215',
-                                         to='+918919434063',
+                                         from_='+115',
+                                         to='+91843',
                                          )
 
 
